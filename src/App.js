@@ -5,9 +5,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
-    <div className='main-page'>
+    <div>
       <Courses></Courses>
-      <Dashboard></Dashboard>
     </div>
   );
 }
