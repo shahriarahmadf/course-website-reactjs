@@ -15,26 +15,42 @@ const Courses = () => {
         .then(data => setCourses(data))
     } , [])
 
-    // 
-    const [courseCart, setCourseCart] = useState([]);
+    
+    // check local storage
+    const storedBreakTime = localStorage.getItem('break time');
+    const storedExerciseTime = localStorage.getItem('exercise time');
+    let storedBreak = 0;
+    if (storedBreakTime){
+        storedBreak = JSON.parse(storedBreakTime);
+    }
+    let exerciseBreak = 0;
+    if (storedExerciseTime){
+        exerciseBreak = JSON.parse(storedExerciseTime);
+    }
 
     // declaring break time and exercise time
-    const [breakTime, setBreakTime] = useState(0);
-    const [exerciseTime, setExerciseTime] = useState(0);
+    const [breakTime, setBreakTime] = useState(storedBreak);
+    const [exerciseTime, setExerciseTime] = useState(exerciseBreak);
+
 
     // break time button event handler
-    let addBreakTime = (t) => setBreakTime(t);
+    let addBreakTime = (t) => {
+        localStorage.setItem('break time',t);    
+        setBreakTime(t);
+    };
     
     // add course to list button function
     const addToList = (id) => {
-        //console.log(id);
-        console.log(courses.map(course => {
-            if(course.id == id){
-                setExerciseTime(course.time);
-            }
-        }))
-        const newCourseCart = [...courseCart, id]
-        setCourseCart(newCourseCart);
+        console.log('pressed');
+        courses.map(course => {
+        if(course.id == id){
+            console.log('here');
+            setExerciseTime(exerciseTime+course.time);
+            localStorage.setItem('exercise time', exerciseTime+course.time);
+            console.log('there');
+        }
+        })
+
     }
 
     return (
@@ -57,7 +73,6 @@ const Courses = () => {
 
             <div className='dashboard'>
                 <h2>dashboard</h2>
-                <h3>Registered Courses: {courseCart.length}</h3>
 
                 <h3>Profile Information</h3>
                 <div className="profile-info">
@@ -75,13 +90,13 @@ const Courses = () => {
                 <h3>Add A Break</h3>
                 <div className="add-a-break">
                     <button onClick={() => addBreakTime(10)} className='break-btn'>
-                        15 min
+                        10 min
                     </button>
                     <button onClick={() =>addBreakTime(20)} className='break-btn'>
-                        30 min
+                        20 min
                     </button>
                     <button onClick={() =>addBreakTime(30)} className='break-btn'>
-                        45 min
+                        30 min
                     </button>
                     <button onClick={() =>addBreakTime(60)} className='break-btn'>
                         60 min
@@ -98,8 +113,8 @@ const Courses = () => {
                     </div>
                 </div>
                 
-                <div className="complete-button">
-                    <h2>Course Session Completed</h2>
+                <div>
+                    <button className='complete-button'><h2>Course Session Completed</h2></button>
                 </div>
 
             </div>
