@@ -2,42 +2,42 @@
     {
       "id": "1",
       "name": "Passing Course",
-      "time": 3 ,
+      "time": 120 ,
       "img": "./images/passing.PNG",
       "instructor": "Xavi Hernandez"
     },
     {
       "id": "2",
       "name": "Defending Course",
-      "time": 3 ,
+      "time": 60 ,
       "img": "./images/defending.PNG",
       "instructor": "Sergio Ramos"
     },
     {
       "id": "3",
       "name": "Dribbling Course",
-      "time": 6 ,
+      "time": 120 ,
       "img": "./images/dribbling.PNG",
       "instructor": "Lionel Messi"
     },
     {
       "id": "4",
       "name": "Shooting Course",
-      "time": 5 ,
+      "time": 60 ,
       "img": "./images/shooting.PNG",
       "instructor": "Cristiano Ronaldo"
     },
     {
       "id": "5",
       "name": "Goalkeeping Course",
-      "time": 2 ,
+      "time": 60 ,
       "img": "./images/goalkeeping.PNG",
       "instructor": "Manuel Neuer"
     },
     {
       "id": "6",
       "name": "Managing Course",
-      "time": 4 ,
+      "time": 90 ,
       "img": "./images/manager.PNG",
       "instructor": "Zinedine Zidane"
     }

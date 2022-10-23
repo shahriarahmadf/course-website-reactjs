@@ -2,11 +2,13 @@ import React from 'react';
 import './Dashboard.css'
 import './../Courses/Courses'
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     
     return (
         <div className='dashboard'>
-            <h2>dashboard</h2>
+            
+
+
         </div>
     );
 };

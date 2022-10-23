@@ -18,12 +18,12 @@
 }
 
 .add-course-btn{
-    background-color: navy;
+    background-color: aqua;
     width: 80%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    color: white;
+    color: black;
     font-size: larger;
 }
 

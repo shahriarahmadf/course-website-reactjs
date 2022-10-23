@@ -21,6 +21,7 @@ const Courses = () => {
     // add course to list button function
     const addToList = (id) => {
         console.log(id);
+        console.log(courses);
 
         const newCourseCart = [...courseCart, id]
         setCourseCart(newCourseCart);
@@ -46,8 +47,51 @@ const Courses = () => {
 
             <div className='dashboard'>
                 <h2>dashboard</h2>
-                    <h3>Registered Courses: {courseCart.length}</h3>
-                    
+                <h3>Registered Courses: {courseCart.length}</h3>
+
+                <h3>Profile Information</h3>
+                <div className="profile-info">
+                    <div>
+                        Weight:<b> 75</b> kg
+                    </div>
+                    <div>
+                        Height: <b>5'11''</b>
+                    </div>
+                    <div>
+                        Age: <b>25</ b> years 
+                    </div>
+                </div>    
+
+                <h3>Add A Break</h3>
+                <div className="add-a-break">
+                    <button className='break-btn'>
+                        15 min
+                    </button>
+                    <button className='break-btn'>
+                        30 min
+                    </button>
+                    <button className='break-btn'>
+                        45 min
+                    </button>
+                    <button className='break-btn'>
+                        60 min
+                    </button>
+                </div>
+
+                <h3>Course Practice Session Details</h3>              
+                <div className="details">
+                    <div className="time">
+                        <b>Exercise Time: <i>{} minutes</i></b>
+                    </div>
+                    <div className="break-time">
+                        <b>Break Time: <i>{} minutes</i></b>
+                    </div>
+                </div>
+                
+                <div className="complete-button">
+                    <h2>Course Session Completed</h2>
+                </div>
+
             </div>
         </div>
     );

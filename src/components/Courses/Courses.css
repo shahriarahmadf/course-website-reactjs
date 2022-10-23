@@ -12,12 +12,12 @@
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: coral;
+    background-color: aliceblue;
 }
 .header{
-    background-color: darkblue;
+    background-color: wheat;
     height: 80px;
-    color: white;
+    color: black;
     text-align: center;
     border-radius: 15px;
     padding: 10px 80px 10px 80px;
@@ -37,6 +37,64 @@
 /* Dashboard */
 
 .dashboard{
-    background-color: aquamarine;
+    background-color: snow;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-info{
+    width: 80%;
+    display: flex;
+    gap: 15px;
+    margin: 3px;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* break buttons */
+
+.add-a-break{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 80%;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.break-btn{
+    background-color: aqua;
+    padding: 12px;
+    border-radius: 40px;
+}
+
+.break-btn:hover{
+    background-color: aquamarine;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 80%;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+/* complete session  */
+
+.complete-button{
+    background-color: aquamarine;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.complete-button:hover{
+    background-color: aqua;
 }
