@@ -15,8 +15,8 @@
     background-color: aliceblue;
 }
 .header{
-    background-color: wheat;
-    height: 80px;
+    background-color: rgba(135, 218, 233, 0.555);
+    height: 90px;
     color: black;
     text-align: center;
     border-radius: 15px;
@@ -47,6 +47,7 @@
 .profile-info{
     width: 80%;
     display: flex;
+    justify-content: center;
     gap: 15px;
     margin: 3px;
     background-color: aliceblue;

@@ -72,12 +72,12 @@ const Courses = () => {
             </div>
 
             <div className='dashboard'>
-                <h2>dashboard</h2>
+                <h2>DASHBOARD</h2>
 
                 <h3>Profile Information</h3>
                 <div className="profile-info">
                     <div>
-                        Weight:<b> 75</b> kg
+                        <b> Shahriar Ahmad Fahim</b>
                     </div>
                     <div>
                         Height: <b>5'11''</b>
@@ -114,7 +114,7 @@ const Courses = () => {
                 </div>
                 
                 <div>
-                    <button onClick={() => toast('Activity Completed, congratulations!')} className='complete-button'><h2>Course Session Completed</h2></button>
+                    <button onClick={() => toast('Course Session Completed, congratulations!')} className='complete-button'><h2>Complete Course Session</h2></button>
                 </div>
 
             </div>
