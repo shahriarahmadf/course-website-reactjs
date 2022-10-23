@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Course from '../Course/Course';
-import './Courses.css'
-import Dashboard from '../Dashboard/Dashboard'
+import './Courses.css';
+import toast from 'react-simple-toasts';
 
 const Courses = () => {
     
@@ -114,7 +114,7 @@ const Courses = () => {
                 </div>
                 
                 <div>
-                    <button className='complete-button'><h2>Course Session Completed</h2></button>
+                    <button onClick={() => toast('Activity Completed, congratulations!')} className='complete-button'><h2>Course Session Completed</h2></button>
                 </div>
 
             </div>
