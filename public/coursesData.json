@@ -16,14 +16,14 @@
     {
       "id": "3",
       "name": "Dribbling Course",
-      "time": 120 ,
+      "time": 150 ,
       "img": "./images/dribbling.PNG",
       "instructor": "Lionel Messi"
     },
     {
       "id": "4",
       "name": "Shooting Course",
-      "time": 60 ,
+      "time": 90 ,
       "img": "./images/shooting.PNG",
       "instructor": "Cristiano Ronaldo"
     },
@@ -37,7 +37,7 @@
     {
       "id": "6",
       "name": "Managing Course",
-      "time": 90 ,
+      "time": 120 ,
       "img": "./images/manager.PNG",
       "instructor": "Zinedine Zidane"
     }

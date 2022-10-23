@@ -17,12 +17,22 @@ const Courses = () => {
 
     // 
     const [courseCart, setCourseCart] = useState([]);
+
+    // declaring break time and exercise time
+    const [breakTime, setBreakTime] = useState(0);
+    const [exerciseTime, setExerciseTime] = useState(0);
+
+    // break time button event handler
+    let addBreakTime = (t) => setBreakTime(t);
     
     // add course to list button function
     const addToList = (id) => {
-        console.log(id);
-        console.log(courses);
-
+        //console.log(id);
+        console.log(courses.map(course => {
+            if(course.id == id){
+                setExerciseTime(course.time);
+            }
+        }))
         const newCourseCart = [...courseCart, id]
         setCourseCart(newCourseCart);
     }
@@ -64,16 +74,16 @@ const Courses = () => {
 
                 <h3>Add A Break</h3>
                 <div className="add-a-break">
-                    <button className='break-btn'>
+                    <button onClick={() => addBreakTime(10)} className='break-btn'>
                         15 min
                     </button>
-                    <button className='break-btn'>
+                    <button onClick={() =>addBreakTime(20)} className='break-btn'>
                         30 min
                     </button>
-                    <button className='break-btn'>
+                    <button onClick={() =>addBreakTime(30)} className='break-btn'>
                         45 min
                     </button>
-                    <button className='break-btn'>
+                    <button onClick={() =>addBreakTime(60)} className='break-btn'>
                         60 min
                     </button>
                 </div>
@@ -81,10 +91,10 @@ const Courses = () => {
                 <h3>Course Practice Session Details</h3>              
                 <div className="details">
                     <div className="time">
-                        <b>Exercise Time: <i>{} minutes</i></b>
+                        <b>Exercise Time: <i>{exerciseTime} minutes</i></b>
                     </div>
                     <div className="break-time">
-                        <b>Break Time: <i>{} minutes</i></b>
+                        <b>Break Time: <i>{breakTime} minutes</i></b>
                     </div>
                 </div>
                 
